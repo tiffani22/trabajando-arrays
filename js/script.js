@@ -38,5 +38,15 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
+
+  for (let i = 0; i < strangeArray.length; i++) {
+    console.log(`Indice: ${i} Tipo: ${typeof strangeArray[i]}`);
+  }
+
+  var stringsArray = strangeArray.filter(element => typeof element === 'string');
+  stringsArray.sort(function(a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+  });
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  showList(stringsArray);
 });
